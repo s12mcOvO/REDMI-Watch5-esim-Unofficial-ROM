@@ -7,7 +7,7 @@
 
 ### How to use it?
 
-1.Download the lastest source codes releases zip.
+1.Download the rom edition that you want in Release page.
 
 2.**DO NOT UNPACK THE ZIP** and install the AstroBox or other Mi Watch controller.
 
