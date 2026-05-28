@@ -1,0 +1,37 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  push:
+    tags: 
+      - "v*"
+
+jobs:
+  # This workflow contains a single job called "build"
+  build-and-release:
+    runs-on: ubuntu-latest
+    
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v4
+
+      # Runs a single command using the runners shell
+      - name: Pack theme1
+        run: zip -r Theme1.zip Theme1/
+      - name: Pack theme2
+        run: zip -r Theme2.zip Theme2/
+      - name: Pack theme3
+        run: zip -r Theme3.zip Theme3/  
+      - name: Upload to Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: Theme1.zip,Theme2.zip,Theme3.zip
+          name: Release ${{ github.ref_name }}
+          body_path: ./docs/CHANGELOG.md 
+          draft: false           # 是否存为草稿
+          prerelease: false      # 是否为预发布版本
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # 使用内置令牌进行授权
