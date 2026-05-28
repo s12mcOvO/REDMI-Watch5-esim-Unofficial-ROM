@@ -26,11 +26,8 @@
 
 ## 刷机指南
 
-1. 在 [Releases](https://github.com/anomalyco/REDMI-Watch5-esim-Unofficial-ROM/releases) 页面下载你想要的 ROM 版本（Zip 压缩包）
-2. **请勿解压压缩包**
-3. 安装 AstroBox 或其他小米手表管理工具
-4. 将 Zip 刷入你的红米手表 5 eSIM
-
+参见[README](../README.md)
+ 
 ## 设备兼容性
 
 - **设备型号**: REDMI Watch 5 eSIM
@@ -42,4 +39,5 @@
 
 ## 许可证
 
-本项目基于 [LICENSE](../LICENSE) 许可发布。
+本项目基于 [MIT](../LICENSE) 许可发布。
+
