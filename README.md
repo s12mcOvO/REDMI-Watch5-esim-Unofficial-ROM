@@ -5,6 +5,24 @@
 - Better fonts 更好的字体
 - more customize applications(.rpk) slots 更多的自定义应用栏位
 
+### Editions 固件版本
+
+| Edition | 基线 Base | 字体 Fonts | 说明 Notes |
+|---------|-----------|-----------|------------|
+| `Theme1` / `Theme2` / `Theme3` | 3.110.029 | 自定义 MiSans | 早期版本 legacy |
+| `Theme4` | 官方 **3.110.078** | 苹方 PingFang SC | 去预装游戏、含工具链 |
+
+`Theme4` 说明：
+
+- 以官方 3.110.078 为基线（`ap / system / app / misc / watchface` 等保持官方原样），
+  因此 **AVB 分区校验可通过**；
+- 字体替换为苹方（PingFang SC Regular/Medium/Semibold，已 CFF→TrueType 转换并子集化）；
+- `quickapp` 删除 7 个预装游戏（2048、找色块、24点、记忆卡牌、拳力挑战、小人过桥、打地鼠）。
+
+### Tools 工具
+
+见 [`tools/`](tools/)：romfs 解包/重打包、体积报告、苹方字体生成、ROM 构建脚本。
+
 ### How to use it? 如何使用？
 
 1.Download the rom edition that you want in [Release](https://github.com/s12mcOvO/REDMI-Watch5-esim-Unofficial-ROM/releases) page.

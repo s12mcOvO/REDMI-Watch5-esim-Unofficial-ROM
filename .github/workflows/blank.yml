@@ -28,10 +28,12 @@ jobs:
         run: zip -r Theme2.zip Theme2/
       - name: Pack theme3
         run: zip -r Theme3.zip Theme3/  
+      - name: Pack theme4
+        run: zip -r Theme4.zip Theme4/
       - name: Upload to Release
         uses: softprops/action-gh-release@v2
         with:
-          files: Theme1.zip,Theme2.zip,Theme3.zip
+          files: Theme1.zip,Theme2.zip,Theme3.zip,Theme4.zip
           name: Release ${{ github.ref_name }}
           body_path: ./docs/CHANGELOG.md 
           draft: false           # 是否存为草稿
